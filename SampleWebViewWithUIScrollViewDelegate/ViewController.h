@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UIWebViewDelegate, UIScrollViewDelegate>
+{
+    __unsafe_unretained IBOutlet UIWebView *_webView;
+    __unsafe_unretained UIScrollView *_subScrollView;
+}
+@property (unsafe_unretained, nonatomic) UIWebView *webView;
+@property (unsafe_unretained, nonatomic) UIScrollView *subScrollView;
 @end
